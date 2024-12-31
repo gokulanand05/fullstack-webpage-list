@@ -1,0 +1,121 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding and borders in width/height */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: orange;
+  transition: color 0.3s;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-top: 70px;
+  padding: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed; /* Keeps the footer at the bottom of the viewport */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Background Styles for Pages */
+.home,
+.contact,
+.about {
+  position: absolute;
+  top: 70px; /* Offset for fixed navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px - 40px); /* Full height minus navbar and footer */
+  background-size: cover; /* Ensures the image fills the entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home {
+  background-image: url('./images/home.jpg');
+}
+
+.contact {
+  background-image: url('./images/contact.jpg');
+}
+
+.about {
+  background-image: url('./images/about.jpg');
+}
